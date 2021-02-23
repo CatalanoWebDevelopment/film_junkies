@@ -51,8 +51,6 @@ class MoviePage extends Component {
     };
 
     render() {
-        const movieId = this.props.match.params.movieId;
-
         if (this.state.moveInfo === "") {
             // Loading Screen
             return (
@@ -75,13 +73,13 @@ class MoviePage extends Component {
         const yearDisplay = format(release_date.replace("-", "/"), "YYYY");
     
         // All Commmon Background and Poster Sizes
-        const smBgSize = this.state.configuration.images.backdrop_sizes[0];
-        const mdBgSize = this.state.configuration.images.backdrop_sizes[1];
+        // const smBgSize = this.state.configuration.images.backdrop_sizes[0];
+        // const mdBgSize = this.state.configuration.images.backdrop_sizes[1];
         const lgBgSize = this.state.configuration.images.backdrop_sizes[2];
-        const smPosterSize = this.state.configuration.images.poster_sizes[2];
+        // const smPosterSize = this.state.configuration.images.poster_sizes[2];
         const mdPosterSize = this.state.configuration.images.poster_sizes[3];
-        const lgPosterSize = this.state.configuration.images.poster_sizes[4];
-        const xlPosterSize = this.state.configuration.images.poster_sizes[5];
+        // const lgPosterSize = this.state.configuration.images.poster_sizes[4];
+        // const xlPosterSize = this.state.configuration.images.poster_sizes[5];
 
         // Define Background Size 
         const bgUrl = this.state.movieInfo.backdrop_path;

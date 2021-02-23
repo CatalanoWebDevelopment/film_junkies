@@ -10,7 +10,6 @@ class PopularMovies extends Component {
         page: 1
     };
 
-
     getPopularMovies = async (pageNumber) => {
         const response = await fetch(`/api/getPopularMovies/?pagenumber=${pageNumber}`);
         const body = await response.json();

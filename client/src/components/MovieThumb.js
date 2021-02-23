@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Col } from 'reactstrap';
-import { format } from 'date-fns';
 import '../App.scss';
 
 const MovieThumb = props => {
+    console.log("URL", props.baseUrl + props.smPosterSize + props.posterPath)
     const posterImage = props.posterPath === null ? "https://via.placeholder.com/342x513.png?text=No+Poster+Available" : props.baseUrl + props.smPosterSize + props.posterPath;
     const { name, date } = props;
-    const formattedDate = format(date.replace("-", "/"), "MMMM YYYY");
     const ratingPercent = props.voteRating * 10;
     const RatingBadge = () => {
         if (ratingPercent > 79) {
@@ -26,7 +25,7 @@ const MovieThumb = props => {
             </div>
 
             <p className="movie-name">{name}</p>
-            <p className="release-date">{formattedDate}</p>
+            <p className="release-date">{date}</p>
         </Col>
     ); 
 };

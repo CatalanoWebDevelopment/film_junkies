@@ -19,12 +19,13 @@ class App extends Component {
       });
     })
     .catch(error => console.error(error));
+
+    console.log("STATE", this.state.configuration)
   };
 
   getConfiguration = async () => {
     const response = await fetch(`/api/getConfiguration`);
     const body = await response.json();
-
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
@@ -39,8 +40,8 @@ class App extends Component {
         <div className="app-wrapper">
           <Header />
           {this.state.configuration !== null && <React.Fragment>
-            <Search baseUrl={this.state.configuration.images.secure_base_url} smPosterSizer={this.state.configuration.images.poster_sizes[3]} goToPage={this.goToPage} />
-            <PopularMovies baseUrl={this.state.configuration.images.secure_base_url} smPosterSizer={this.state.configuration.images.poster_sizes[3]} goToPage={this.goToPage} />
+            <Search baseUrl={this.state.configuration.images.secure_base_url} smPosterSize={this.state.configuration.images.poster_sizes[3]} goToPage={this.goToPage} />
+            <PopularMovies baseUrl={this.state.configuration.images.secure_base_url} smPosterSize={this.state.configuration.images.poster_sizes[3]} goToPage={this.goToPage} />
           </React.Fragment>}
         </div>
       </BrowserRouter>
