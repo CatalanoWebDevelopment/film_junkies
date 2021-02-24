@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import backArrow from '../img/back-arrow.svg';
+import backArrow from '../img/back-button.svg';
 import Spinner from './Spinner';
 import '../App.scss';
 
