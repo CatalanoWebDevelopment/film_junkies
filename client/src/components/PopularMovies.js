@@ -19,7 +19,6 @@ class PopularMovies extends Component {
 
     setPopularMovies = (pageNumber="1") => {
         this.getPopularMovies(pageNumber).then(res => {
-            console.log(res)
             this.setState({
                 movies: res.response.results,
                 page: res.response.page

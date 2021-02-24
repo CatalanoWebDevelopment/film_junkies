@@ -14,7 +14,6 @@ const getPopularMovies = async (page) => {
 // @desc Retrieves popular movie titles from https://developers.themoviedb.org/3/movies/get-popular-movies
 router.get("/", (req, res) => {
     const pageNumber = req.query.pagenumber;
-    console.log(`Fetching Movies for Page: ${pageNumber}`);
     getPopularMovies(pageNumber).then(data => {
         res.send({ response: data });
     });

@@ -1,0 +1,392 @@
+/*****Import Custom Fonts******/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500');
+
+/*******Media Query variables ********/
+
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+/*****Colours*******/
+
+$theme-primary: #01D277; /*Lime Green*/
+$theme-dark: #081B23; /*Almost black*/
+
+
+/*******Global Styles*******/
+
+.app-wrapper, .movie-page-wrapper, .fourohfour-wrapper {
+  background-color: $theme-dark;
+  min-height: 100vh;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #E3F4FC; 
+}
+
+h2 {
+  font-size: 20px;
+}
+
+@media (min-width: $breakpoint-md) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+p, span {
+  color: #9FBBC7;
+}
+
+.primary-btn {
+  color: #ffffff;
+  border: 0;
+  padding: 12px 23px;
+  transition: all 0.3s ease;
+  background-color: #0f4d69;
+  &:hover {
+    background-color: #0d3f57;
+  }
+}
+
+
+/******Utilities******/
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/*******Header Styles*********/
+
+.header-wrapper {
+  background-image: url("./img/mobile-header-bg.png"), radial-gradient(312.01px at 53.46% -21.35%, rgba(5, 112, 172, 0.46) 0%, rgba(8, 27, 35, 0) 100%);;
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-col {
+  text-align: center;
+  z-index: 9999;
+  
+}
+
+.logo-img {
+  transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+}
+
+.logo-img:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+@media (min-width: $breakpoint-md) {
+
+  .App-header {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .header-wrapper {
+    background-image: none !important;
+    background-size: contain;
+    height: 80px;
+  }
+
+  .logo-col {
+    text-align: left;
+  }
+}
+
+
+/********Search Styles********/
+
+.search-bar {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-prefix {
+  margin-top: 60px;
+}
+
+.search-wrapper {
+  margin-top: -22px; /**Negative margin equal to half of input height**/
+}
+
+@media (min-width: $breakpoint-md) {
+  .search-wrapper {
+    margin-top: -62px;
+    text-align: right;
+  }
+
+  .search-bar {
+    margin: unset;
+    display: inline-block;
+  }
+
+  .search-input {
+    min-width: 360px;
+  }
+}
+
+.search-input {
+  height: 44px;
+  width: 100%;
+  border-radius: 22px;
+  border: 0;
+  padding: 10px 10px 10px 20px;
+}
+
+.search-input::placeholder {
+  color: $theme-primary;
+  font-weight: 500;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%); /*Adjust for own height*/
+}
+
+.search-results {
+  padding-top: 44px;
+}
+
+/******Popular Products*******/
+
+.section-title-row {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .section-title-row  {
+    margin-top: 75px;
+    margin-bottom: 40px;
+  }
+}
+
+.navigation-row {
+  padding-bottom: 30px;
+
+  .prev-btn {
+    float: left;
+  }
+  
+  .next-btn {
+    float: right;
+  }
+}
+
+/*****Movie Thumbnails******/
+
+.movie-thumb-wrapper {
+  margin-bottom: 24px;
+
+  .movie-thumb-img {
+    border-radius: 10px;
+  }
+
+  .movie-name {
+    font-size: 16px;
+    color: #E6F7FF;
+    margin-top: 12px;
+    margin-bottom: 3px;
+  }
+
+  .release-date {
+    font-size: 14px;
+    color: #A1D1E6;
+  }
+
+  .thumb-img-wrapper {
+    position: relative;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-2%);
+    }
+  }
+
+  .rating-badge {
+    position: absolute;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 3px 12px;
+    left: 5px;
+    top: 5px;
+    border-radius: 12px;
+    &.high-rating {
+      background-color: #01D277;
+    }
+    &.medium-rating {
+      background-color: #4902A3;
+    }
+    &.low-rating {
+      background-color: #D1225B;
+    }
+
+  }
+}
+
+/*****Movie Page*******/
+
+.movie-header-wrapper {
+  height: 245px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+
+.movie-pg-desktop-title {
+  font-size: 45px;
+  color: $theme-dark;
+  background-color: #fff;
+  padding: 15px 35px;
+  display: inline-block;
+  position: relative;
+}
+
+.movie-pg-desktop-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 95%;
+  height: 20px;
+  background-color: $theme-primary;
+  bottom: -10px;
+}
+
+@media (min-width: $breakpoint-md) {
+    .movie-pg-desktop-title {
+      font-size: 60px;
+      color: $theme-dark;
+      background-color: #fff;
+      padding: 30px 60px;
+      display: inline-block;
+      position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 95%;
+      height: 30px;
+      background-color: $theme-primary;
+      bottom: -15px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  .movie-header-wrapper {
+    height: 350px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .movie-header-wrapper {
+    height: 500px;
+  }
+}
+
+.desktop-movie-details {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  & p, span {
+    color: #fff;
+    opacity: 0.9;
+  }
+  .details-divider {
+    color: $theme-primary;
+    padding: 0 20px;
+    opacity: 1;
+  }
+}
+
+.details-divider {
+  color: $theme-primary;
+  padding: 0 20px;
+}
+
+.movie-back-arrow {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}
+
+.movie-pg-poster {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5), 0px 8px 16px rgba(0, 0, 0, 0.5), 0px 16px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: -30%;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .movie-pg-poster {
+    margin-top: 60px;
+  }
+}
+
+
+.movie-pg-title {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.movie-details {
+  margin-top: 15px;
+}
+
+.movie-details p {
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #B8D8E6;
+  margin-bottom: 3px;
+}
+
+.movie-pg-section-divider {
+  margin-top: 30px;
+  border: 0.5px solid #0F303D;
+}
+
+.movie-overview-title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .movie-overview-title {
+    margin-top: 60px;
+  }
+}
+
+.movie-description {
+  font-size: 16px;
+  line-height: 24px;
+}

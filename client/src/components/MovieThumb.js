@@ -3,7 +3,6 @@ import { Col } from 'reactstrap';
 import '../App.scss';
 
 const MovieThumb = props => {
-    console.log("URL", props.baseUrl + props.smPosterSize + props.posterPath)
     const posterImage = props.posterPath === null ? "https://via.placeholder.com/342x513.png?text=No+Poster+Available" : props.baseUrl + props.smPosterSize + props.posterPath;
     const { name, date } = props;
     const ratingPercent = props.voteRating * 10;
