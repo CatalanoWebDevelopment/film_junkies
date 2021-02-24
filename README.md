@@ -1,4 +1,4 @@
-# film_junkies
-React, NodeJS, ExpressJS, Heroku
-Project is based off of The Movie Database API
+# film_junkies<br>
+React, NodeJS, ExpressJS, Heroku<br>
+Project is based off of The Movie Database API<br>
 See: https://www.themoviedb.org/
