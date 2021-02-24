@@ -49,6 +49,8 @@ p, span {
   padding: 12px 23px;
   transition: all 0.3s ease;
   background-color: #0f4d69;
+  box-shadow: -2px 2px 7px -1px #1c1c1c;
+  border-radius: 3px;
   &:hover {
     background-color: #0d3f57;
   }
@@ -65,7 +67,7 @@ p, span {
 
 /*******Header Styles*********/
 .header-wrapper {
-  background-image: url("./img/mobile-header-bg.png"), radial-gradient(312.01px at 53.46% -21.35%, rgba(5, 112, 172, 0.46) 0%, rgba(8, 27, 35, 0) 100%);;
+  background-image: url("./img/logo.svg"), radial-gradient(312.01px at 53.46% -21.35%, rgba(5, 112, 172, 0.46) 0%, rgba(8, 27, 35, 0) 100%);;
   background-position: center center;
   background-size: cover;
   height: 200px;

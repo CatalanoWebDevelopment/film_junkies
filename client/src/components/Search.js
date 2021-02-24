@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import MovieThumb from './MovieThumb';
-import searchIcon from '../img/search.png';
 import '../App.scss';
 
 class Search extends Component {
@@ -40,7 +39,6 @@ class Search extends Component {
                         <Col>
                             <div className="search-bar">
                                 <input type="text" placeholder="Search..." className="search-input" value={this.state.query} onChange={this.handleOnChangeEvent} />
-                                <img src={searchIcon} alt="" className="search-icon" />
                             </div>
                         </Col>
                     </Row>
