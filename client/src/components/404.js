@@ -5,13 +5,16 @@ import '../App.scss';
 
 const FourZeroFour = () => {
     return (
-        <div className="404-wrapper">
+        <div className="fourzerofour-wrapper align-items-center d-flex">
             <Container>
                 <Row>
                     <Col className="text-center">
-                        <h3 className="404-heading mt-5">
-                            Oops! Looks like that page doesn't exist. <Link to={"/"}>Let's go back to the home page and try it again</Link>
+                        <h3 className="fourzerofour-heading mt-5">
+                            Oops! Looks like that page doesn't exist.
                         </h3>
+                        <h4>
+                            <Link to={"/"}>Let's go back to the home page and try it again</Link>
+                        </h4>
                     </Col>
                 </Row>
             </Container>

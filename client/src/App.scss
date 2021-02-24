@@ -13,7 +13,7 @@ $theme-secondary: #01b4e4; /* Light Blue */
 $theme-tertiary: #90cea1; /* Light Green */
 
 /*******Global Styles*******/
-.app-wrapper, .movie-page-wrapper, .fourohfour-wrapper {
+.app-wrapper, .movie-page-wrapper, .fourzerofour-wrapper {
   background: rgb(13,37,63);
   background: linear-gradient(180deg, $theme-primary 0%, $theme-secondary 62%, $theme-tertiary 100%);
   min-height: 100vh;
@@ -54,6 +54,10 @@ p, span {
   &:hover {
     background-color: #0d3f57;
   }
+}
+
+a:hover {
+  transform: scale(1.5);
 }
 
 /******Utilities******/
