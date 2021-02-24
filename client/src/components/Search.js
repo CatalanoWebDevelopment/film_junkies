@@ -11,8 +11,9 @@ class Search extends Component {
     };
 
     getMovies = async (searchInput) => {
-        const response = await fetch(`/api/getMoviesSearch/?query=${searchInput}`);
+        const response = await fetch(`/api/getMovies/?query=${searchInput}`);
         const body = await response.json();
+        console.log("BODY", body)
         if (response.status !== 200) throw Error(body.message);
         return body;
     };
@@ -22,6 +23,7 @@ class Search extends Component {
             query: event.target.value
         }, () => {
             this.getMovies(this.state.query).then(res => {
+                console.log(res.response.results)
                 this.setState({
                     results: res.response.results
                 });

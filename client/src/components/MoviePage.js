@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import backArrow from '../img/back-arrow.png';
-import { format } from 'date-fns';
+import backArrow from '../img/back-arrow.svg';
 import Spinner from './Spinner';
 import '../App.scss';
 
@@ -96,7 +95,7 @@ class MoviePage extends Component {
             return (
                 <div className="movie-page-wrapper">
                     <div className="movie-header-wrapper" style={movieBg}>
-                        <img src={backArrow} alt="Back to Homepage" className="movie-back-arrow pointer" onClick={() => { this.goBack() }} />
+                        <img src={backArrow} alt="Back to Homepage" className="movie-back-arrow pointer mw-50" title="Go Back" onClick={() => { this.goBack() }} />
                         <Container className="d-none d-md-block">
                             <Row>
                                 <Col>

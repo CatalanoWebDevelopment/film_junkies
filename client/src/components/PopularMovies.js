@@ -50,7 +50,7 @@ class PopularMovies extends Component {
                         <Row>
                             <Col className="d-flex justify-content-between section-title-row">
                                 <h2>Popular Movies</h2>
-                                <span>Page: {this.state.page}</span>
+                                <span className="page-indicator">Page: {this.state.page}</span>
                             </Col>
                         </Row>
 
